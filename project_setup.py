@@ -57,9 +57,10 @@ def setup(
 
 def _set_secrets(project: mlrun.projects.MlrunProject):
     # Set the secrets:
-    project.set_secrets(file_path="mlrun.env")
+#    project.set_secrets(file_path="mlrun.env")
     # Set as environment variables:
-    mlrun.set_env_from_file("mlrun.env")
+#    mlrun.set_env_from_file("mlrun.env")
+    pass
 
 
 def _build_image(project: mlrun.projects.MlrunProject):
