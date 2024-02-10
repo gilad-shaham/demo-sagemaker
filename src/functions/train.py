@@ -31,7 +31,7 @@ def train(context):
     sagemaker_session = sagemaker.session.Session(
         boto_session=boto_session, sagemaker_client=sm_client
     )
-    role = context.get_secret("SAGEMAKER-ROLE")
+    role = context.get_secret("SAGEMAKER_ROLE")
     bucket_prefix = "payment-classification"
     s3_bucket = sagemaker_session.default_bucket()
 
@@ -99,7 +99,7 @@ def _set_envars(context):
     os.environ["AWS_ACCESS_KEY_ID"] = context.get_secret("AWS_ACCESS_KEY_ID")
     os.environ["AWS_SECRET_ACCESS_KEY"] = context.get_secret("AWS_SECRET_ACCESS_KEY")
     os.environ["AWS_DEFAULT_REGION"] = context.get_secret("AWS_DEFAULT_REGION")
-    os.environ["SAGEMAKER-ROLE"] = context.get_secret("SAGEMAKER-ROLE")
+    os.environ["SAGEMAKER_ROLE"] = context.get_secret("SAGEMAKER_ROLE")
 
 
 def _get_feature_store_data(context):
