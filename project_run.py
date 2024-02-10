@@ -57,3 +57,5 @@ def main(
     project.run(name=workflow_name, dirty=True, watch=True)
 
 
+if __name__ == "__main__":
+    main()
