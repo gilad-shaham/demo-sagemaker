@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Create env file
       run: |
-        touch mlrun.env
+        >| mlrun.env
         echo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} >> mlrun.env
         echo AWS_SECRET_ACCESS_KEY=${{ secrets.API_KEY }} >> mlrun.env
         echo "AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION" >> mlrun.env
