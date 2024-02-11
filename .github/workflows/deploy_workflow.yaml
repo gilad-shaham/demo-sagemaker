@@ -24,7 +24,7 @@ jobs:
         >| mlrun.env
         >| ~/.mlrun.env
         echo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} >> ~/.mlrun.env
-        echo AWS_SECRET_ACCESS_KEY=${{ secrets.API_KEY }} >> ~/.mlrun.env
+        echo AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} >> ~/.mlrun.env
         echo "AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION" >> ~/.mlrun.env
         echo SAGEMAKER_ROLE=${{ secrets.SAGEMAKER_ROLE }} >> ~/.mlrun.env
     - name: Deploy model
