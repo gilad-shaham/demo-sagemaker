@@ -35,15 +35,11 @@ jobs:
           --branch ${{ github.ref_name }} \
           --single-cluster-mode
       env:
-        V3IO_USERNAME: ${{ secrets.V3IO_USERNAME }}
+#        V3IO_USERNAME: ${{ secrets.V3IO_USERNAME }}
 #        V3IO_API: ${{ secrets.V3IO_API }}
         V3IO_ACCESS_KEY: ${{ secrets.V3IO_ACCESS_KEY }}
         MLRUN_DBPATH: ${{ secrets.MLRUN_DBPATH }}
 #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 #        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-        SAGEMAKER_ROLE: ${{ secrets.SAGEMAKER_ROLE }}
         CMD: ${{ github.event.comment.body}}  
         COMMIT: ${{ github.sha}}
